@@ -1,4 +1,5 @@
 import Nav from "./containers/Nav/Nav";
+import TaskCard from "./components/TaskCard/TaskCard";
 
 import { useState, useEffect } from "react";
 
@@ -25,8 +26,11 @@ function App() {
 
   useEffect(filterFunction,[taskData])
 
+ 
+
   const renderNewTasks = filteredTaskData.map((task) => {
-      return <p>{task}</p>
+      return <TaskCard taskDT = {task} setTaskData = {setTaskData} setFilteredTaskData = {setFilteredTaskData} taskData= {taskData} filteredTaskData = {filteredTaskData}/>  
+    // return <button onClick = {deleteFunction (task)}>{task}</button>
     })
   
 
