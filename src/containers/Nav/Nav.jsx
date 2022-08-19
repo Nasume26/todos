@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 
 const Nav = (props) => {
-    const { setTask } = props;
+    const { setTask, taskData } = props;
 
     const [input,setInput] = useState("")
 
@@ -18,7 +18,6 @@ const Nav = (props) => {
 
     const handleInput = (event) => {
         setInput(event.target.value)
-        console.log(input)
     }
 
 
