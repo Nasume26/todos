@@ -14,7 +14,10 @@ const TaskCard = (props) => {
       }
 
     return (
-        <button onClick = {deleteFunction}>{taskDT}</button>
+        <div>
+            <h1>{taskDT}</h1>
+            <button onClick = {deleteFunction}>DELETE</button>
+        </div>
     )
 }
 
