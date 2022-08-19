@@ -1,13 +1,15 @@
 
 
 const TaskBar = (props) => {
-    
+    const {handleSubmit, handleInput, input} = props;
 
 
     return (
         <>
-        <form>
-            <input>
+        <form onSubmit = {handleSubmit}>
+            <input 
+            value={input}
+            onInput={handleInput}>
             </input>
             <button>
                 +

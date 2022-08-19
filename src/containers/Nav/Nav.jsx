@@ -11,11 +11,14 @@ const Nav = (props) => {
 
 
     const handleSubmit = (event) => {
+        event.preventDefault();
+        setTask(input)
         
     }
 
     const handleInput = (event) => {
         setInput(event.target.value)
+        console.log(input)
     }
 
 
@@ -23,7 +26,7 @@ const Nav = (props) => {
         <>
         <h1>My Todos</h1>
         <Reset />
-        <TaskBar handleSubmit = {handleSubmit} handleInput = {handleInput} />
+        <TaskBar handleSubmit = {handleSubmit} handleInput = {handleInput} input = {input} />
         </>
     )
 };
