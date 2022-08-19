@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 
 const Nav = (props) => {
-    const { setTask, taskData } = props;
+    const { setTask, taskData, setFilteredTaskData } = props;
 
     const [input,setInput] = useState("")
 

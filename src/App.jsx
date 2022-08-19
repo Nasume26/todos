@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <Nav setTask = {setTask} taskData= {taskData}/>
+      <Nav setTask = {setTask} taskData= {taskData} setFilteredTaskData = {setFilteredTaskData}/>
       {renderNewTasks}
     </div>
   );
