@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 
 const Nav = (props) => {
-    const { setTask, taskData, setFilteredTaskData } = props;
+    const { setTask, taskData, setFilteredTaskData, setTaskData } = props;
 
     const [input,setInput] = useState("")
 
@@ -20,11 +20,16 @@ const Nav = (props) => {
         setInput(event.target.value)
     }
 
+    const handleReset = () => {
+        setFilteredTaskData([])
+        setTaskData([])
+    }
+
 
     return (
         <>
         <h1>My Todos</h1>
-        <Reset />
+        <Reset handleReset= {handleReset}/>
         <TaskBar handleSubmit = {handleSubmit} handleInput = {handleInput} input = {input} />
         </>
     )

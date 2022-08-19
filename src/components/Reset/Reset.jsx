@@ -1,10 +1,14 @@
 
 
 const Reset = (props) => {
+    const { handleReset } = props;
+
 
     return (
         <>
-        <button>Reset</button>
+        <button
+        onClick={handleReset}
+        >Reset</button>
         </>
     )
 }
