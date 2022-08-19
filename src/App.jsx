@@ -25,14 +25,12 @@ function App() {
 
   useEffect(filterFunction,[taskData])
 
-  const renderNewTasks = () => {
-    console.log(filteredTaskData)
-    filteredTaskData.map((task) => {
+  const renderNewTasks = filteredTaskData.map((task) => {
       return <p>{task}</p>
     })
-  }
+  
 
-  useEffect(renderNewTasks,[filteredTaskData])
+
 
 
 
