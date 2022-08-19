@@ -5,6 +5,15 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [task, setTask] = useState("")
+  const [taskData,setTaskData] = useState([])
+
+
+  const renderNewTasks = () => {
+    setTaskData(taskData.push(task))
+    console.log(taskData)
+  }
+
+  // useEffect(renderNewTasks [task])
 
 
 
