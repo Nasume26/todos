@@ -6,31 +6,33 @@ import { useState, useEffect } from "react";
 function App() {
   const [task, setTask] = useState()
   const [taskData,setTaskData] = useState([])
+  const [filteredTaskData,setFilteredTaskData] = useState([])
 
 
   const setNewTasks = () => {
     setTaskData((oldArray) => [...oldArray, task])
-    console.log(taskData)
   }
 
-  let filterNewTasks;
 
   useEffect(setNewTasks,[task])
 
   const filterFunction = () => {
-    filterNewTasks = taskData.filter((task) => {
-      return typeof task === "string" && task
-    })
+    setFilteredTaskData(taskData.filter((task) => {
+      return typeof task === "string"
+    }))
   }
   
 
   useEffect(filterFunction,[taskData])
 
   const renderNewTasks = () => {
-    filterNewTasks.map((task) => {
+    console.log(filteredTaskData)
+    filteredTaskData.map((task) => {
       return <p>{task}</p>
     })
   }
+
+  useEffect(renderNewTasks,[filteredTaskData])
 
 
 
