@@ -13,6 +13,7 @@ const Nav = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         setTask(input)
+        setInput("")
         
     }
 
